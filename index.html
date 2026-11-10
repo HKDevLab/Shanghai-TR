@@ -366,6 +366,18 @@ footer{background:var(--surf)}
 :root:not([data-theme="light"]) footer{background:rgba(23,8,16,.75)}
 }
 
+
+/* mobile hero background v2: no mask (iOS-safe), fade built into the background, text sits on clean area */
+@media(max-width:759px){
+ :root:root:root .hero:before{
+  top:auto!important;bottom:0!important;height:78vw!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+  background:linear-gradient(to bottom,var(--bg) 0,rgba(0,0,0,0) 62%),linear-gradient(var(--wash),var(--wash)),var(--bgr) right bottom/auto 100% no-repeat!important}
+ .hero{padding-bottom:calc(52vw + 28px)!important}
+ .cta{flex-direction:column;align-items:center;gap:12px}
+ .cta .btn{min-width:240px;justify-content:center}
+ #wa-float,.wafloat,.wa-fab{width:50px;height:50px}
+}
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap">
